@@ -10,7 +10,7 @@ body {
 
 /* En-tête avec dégradé et ombre */
 header {
-    background: linear-gradient(135deg, #4CAF50, #45a049);
+    background: linear-gradient(135deg, #2a4e43, #2a4e43);
     color: white;
     text-align: center;
     padding: 40px 0;
