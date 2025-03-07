@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ajouter une entrée au DOM avec un bouton Modifier
     function ajouterEntreeDOM(texte, index) {
         const li = document.createElement("li");
-        li.textContent = texte;
+        
+        const spanTexte = document.createElement("span");
+        spanTexte.textContent = texte;
         
         const boutonModifier = document.createElement("button");
         boutonModifier.textContent = "Modifier";
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             modifierEntree(index);
         });
         
+        li.appendChild(spanTexte);
         li.appendChild(boutonModifier);
         listeJournal.appendChild(li);
     }
