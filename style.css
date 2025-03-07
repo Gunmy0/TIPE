@@ -45,6 +45,20 @@ section ul {
     margin-left: 20px;
 }
 
+.modifier {
+    margin-left: 10px;
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.modifier:hover {
+    background-color: #0056b3;
+}
+
+
 footer {
     background-color: #333;
     color: white;
