@@ -1,55 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const boutonAjouter = document.getElementById("ajouter-entree");
-    const listeJournal = document.getElementById("journal");
-    
-    // Charger les entrées existantes depuis le localStorage
-    function chargerJournal() {
-        const entrees = JSON.parse(localStorage.getItem("journalTIPE")) || [];
-        listeJournal.innerHTML = "";
-        entrees.forEach((entree, index) => ajouterEntreeDOM(entree, index));
+    const boutonSauvegarder = document.getElementById("sauvegarder-texte");
+    const zoneTexte = document.getElementById("zone-texte");
+
+    // Charger le texte existant depuis le localStorage
+    function chargerTexte() {
+        const texteSauvegarde = localStorage.getItem("journalTIPE") || "";
+        zoneTexte.value = texteSauvegarde;
     }
-    
-    // Ajouter une entrée au DOM avec un bouton Modifier
-    function ajouterEntreeDOM(texte, index) {
-        const li = document.createElement("li");
-        
-        const spanTexte = document.createElement("span");
-        spanTexte.textContent = texte;
-        
-        const boutonModifier = document.createElement("button");
-        boutonModifier.textContent = "Modifier";
-        boutonModifier.classList.add("modifier");
-        boutonModifier.addEventListener("click", function () {
-            modifierEntree(index);
-        });
-        
-        li.appendChild(spanTexte);
-        li.appendChild(boutonModifier);
-        listeJournal.appendChild(li);
-    }
-    
-    // Ajouter une nouvelle entrée
-    boutonAjouter.addEventListener("click", function () {
-        const texte = prompt("Ajoutez une nouvelle entrée au journal de bord :");
-        if (texte) {
-            const entrees = JSON.parse(localStorage.getItem("journalTIPE")) || [];
-            entrees.push(texte);
-            localStorage.setItem("journalTIPE", JSON.stringify(entrees));
-            chargerJournal();
-        }
+
+    // Sauvegarder le texte dans le localStorage
+    boutonSauvegarder.addEventListener("click", function () {
+        const texte = zoneTexte.value;
+        localStorage.setItem("journalTIPE", texte);
+        alert("Texte sauvegardé !");
     });
-    
-    // Modifier une entrée existante
-    function modifierEntree(index) {
-        const entrees = JSON.parse(localStorage.getItem("journalTIPE")) || [];
-        const nouveauTexte = prompt("Modifiez l'entrée :", entrees[index]);
-        if (nouveauTexte !== null) {
-            entrees[index] = nouveauTexte;
-            localStorage.setItem("journalTIPE", JSON.stringify(entrees));
-            chargerJournal();
-        }
-    }
-    
-    // Charger le journal au démarrage
-    chargerJournal();
+
+    // Charger le texte au démarrage
+    chargerTexte();
 });
