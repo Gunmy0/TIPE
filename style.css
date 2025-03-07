@@ -56,5 +56,6 @@ footer {
 }
 
 footer p {
+    position: absolute;
     margin: 0;
 }
