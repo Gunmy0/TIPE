@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #8a1c1c, #2a0a0a);
+    background: linear-gradient(180deg, #3f62b0, #000000);
     color: #ffb144;
     text-align: center;
     padding: 80px 0;
@@ -88,7 +88,6 @@ section h2 {
     margin-bottom: 25px;
     font-size: 2.5rem;
     font-weight: 600;
-    border-bottom: 3px solid #ffb144;
     display: inline-block;
     padding-bottom: 10px;
     transition: color 0.5s ease, border-bottom 0.5s ease;
@@ -107,20 +106,20 @@ body.light-mode {
     color: #333;
 }
 
+body.light-mode section h2 {
+    color:#3f62b0;
+}
 body.light-mode header {
-    background: linear-gradient(135deg, #00b7ff, #0099cc);
+    background: linear-gradient(178deg, #a6bdf0, #3f62b0);
     color: white;
 }
 
 body.light-mode section {
     background-color: #fff;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    
 }
 
-body.light-mode section h2 {
-    color: #00b7ff;
-    border-bottom: 3px solid #00b7ff;
-}
 
 body.light-mode section p {
     color: #555;
