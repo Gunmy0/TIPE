@@ -252,3 +252,40 @@ header::after {
     animation: particleMove 5s linear infinite;
     opacity: 0.8;
 }
+
+/* Styles pour la section des images */
+.images-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Espace entre les images */
+    margin-top: 20px;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustements pour le mode clair */
+body.light-mode .project-image {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-image:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
