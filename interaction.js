@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
         body.classList.add("light-mode");
-        toggleButton.textContent = "Mode Sombre";
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i>'; // Icône lune pour le mode clair
+    } else {
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i>'; // Icône soleil pour le mode sombre
     }
 
     // Basculer entre les modes
@@ -14,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
         body.classList.toggle("light-mode");
         if (body.classList.contains("light-mode")) {
             localStorage.setItem("theme", "light");
-            toggleButton.textContent = "Mode Sombre";
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i>'; // Icône lune pour le mode clair
         } else {
             localStorage.setItem("theme", "dark");
-            toggleButton.textContent = "Mode Clair";
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i>'; // Icône soleil pour le mode sombre
         }
     });
 });
