@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>TIPE DELAROQUE</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="interaction.js" defer></script>
 </head>
 <body>
   <header>
     <h1>TIPE - Conception Générative et Cycles</h1>
     <p>Exploration des cycles mathématiques et informatiques dans la création visuelle</p>
-    <button id="toggle-theme">Mode Clair</button>
+    <button id="toggle-theme" class="theme-toggle">
+      <i class="fas fa-sun"></i> <!-- Icône soleil par défaut -->
+  </button>
+    <a href="journal.html" class="journal-link">Voir le journal de bord</a>
   </header>
   
   <section class="introduction">
@@ -22,7 +26,7 @@
     <h2>Objectifs</h2>
     <ul>
         <li>Comprendre les principes de la conception générative et leur lien avec les mathématiques et la physique.</li>
-        <li>Étudier l’utilisation des boucles de rétroaction dans la génération de formes architecturales.</li>
+        <li>Étudier l'utilisation des boucles de rétroaction dans la génération de formes architecturales.</li>
         <li>Développer un programme simulant un modèle de réaction-diffusion pour générer des motifs architecturaux.</li>
     </ul>
   </section>
@@ -31,16 +35,6 @@
     <h2>Étude de Cas : Réaction-Diffusion et Architecture</h2>
     <p>Le modèle de réaction-diffusion est utilisé pour générer des motifs naturels. En architecture, il permet d’optimiser la lumière, la ventilation et l’esthétique des structures.</p>
     <p>Exemple : Simuler une façade perforée en fonction des paramètres de diffusion et réaction.</p>
-  </section>
-  
-  <section class="journal-bord">
-    <h2>Journal de Bord</h2>
-    <ul>
-      <li><strong>2023-10-01 :</strong> Début du projet. Recherche sur les modèles de réaction-diffusion.</li>
-      <li><strong>2023-10-05 :</strong> Implémentation d'un algorithme de base pour simuler la réaction-diffusion.</li>
-      <li><strong>2023-10-10 :</strong> Application du modèle à un cas d'étude architectural.</li>
-      <li><strong>2023-10-15 :</strong> Optimisation des paramètres pour améliorer l'esthétique des motifs générés.</li>
-    </ul>
   </section>
 </body>
 </html>
