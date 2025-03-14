@@ -198,6 +198,13 @@ a:hover {
     text-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
 }
 
+body.light-mode a {
+    color: #ffffff;
+}
+body.light-mode a:hover {
+    color: #949494;
+    text-shadow: 0 0 8px rgba(159, 156, 156, 0.6);
+}
 /* Animation pour les sections */
 @keyframes fadeIn {
     from {
