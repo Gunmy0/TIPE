@@ -247,6 +247,14 @@ a.journal-link:hover, a.back-link:hover {
     transform: scale(1.05);
 }
 
+body.light-mode a.journal-link, body.light-mode a.back-link {
+    background-color: #3f62b0;
+    color: white;
+}
+body.light-mode a.journal-link:hover, body.light-mode a.back-link:hover {
+    background-color: #949494;
+}
+
 a.journal-link:active, a.back-link:active {
     transform: scale(0.95);
 }
