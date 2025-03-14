@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: linear-gradient(180deg, #3f62b0, #000000);
+    background: linear-gradient(180deg, #962f2f, #000000);
     color: #ffb144;
     text-align: center;
     padding: 80px 0;
@@ -142,6 +142,11 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 177, 68, 0.3);
     outline: none; /* Pour enlever le contour par défaut au focus */
+}
+body.light-mode button {
+    background-color: #3f62b0;
+    color: white;
+    box-shadow: 0 4px 15px rgba(63, 98, 176, 0.3);
 }
 
 button:hover {
