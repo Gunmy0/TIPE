@@ -248,11 +248,11 @@ a.journal-link:hover, a.back-link:hover {
 }
 
 body.light-mode a.journal-link, body.light-mode a.back-link {
-    background-color: #3f62b0;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 body.light-mode a.journal-link:hover, body.light-mode a.back-link:hover {
-    background-color: #949494;
+    background-color: #dedede;
 }
 
 a.journal-link:active, a.back-link:active {
