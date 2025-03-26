@@ -17,32 +17,31 @@
     <p>Ce projet explore l'optimisation thermique des bâtiments en fonction de l'inertie thermique des matériaux, de l'isolation et de l'impact de l'environnement (vent, ensoleillement, humidité), tout en intégrant l'influence des cycles jour/nuit et des variations saisonnières à travers la modélisation mathématique et des simulations numériques.</p>
   </section>
 
-  <section class="modelisation">
-    <h2>Modélisation Mathématique</h2>
-    <p>L'évolution de la température intérieure est modélisée par l’équation de la chaleur :</p>
-    <pre>\[ \frac{\partial T}{\partial t} = \alpha \nabla^2 T \]</pre>
-    <p>où \( \alpha \) est la diffusivité thermique des matériaux.</p>
-    <p>Les échanges thermiques sont décrits par :</p>
-    <ul>
-      <li>Conduction thermique \( Q = \frac{kA(T_{int} - T_{ext})}{e} \)</li>
-      <li>Convection avec l'air \( Q = h A (T_{surf} - T_{air}) \)</li>
-      <li>Rayonnement thermique \( P = \sigma \varepsilon A (T^4 - T_{ext}^4) \)</li>
-    </ul>
+  <section class="images-section">
+    <h2>Exemples Visuels</h2>
+    <div class="image-container">
+      <img src="images/image1.jpg" alt="Exemple visuel 1" width=100% height=100% class="project-image">
+      <img src="images/image2.webp" alt="Exemple visuel 2" width=70% height=70% class="project-image">
+    </div>
   </section>
-
-  <section class="simulation">
-    <h2>Simulation et Analyse de Données</h2>
-    <p>Les données thermiques issues de bâtiments en Suède et dans le sud de la France sont analysées pour identifier :</p>
+  <section class="analyse données">
+    <h2>Analyse des données thermiques issues des bâtiments</h2>
+    <p>On dispose de mesures de température intérieure et extérieure pour deux bâtiments :</p>
     <ul>
-      <li>Les cycles jour/nuit et saisonniers et leur impact sur la température intérieure</li>
-      <li>Les performances des matériaux en termes d'inertie thermique</li>
-      <li>L'impact de l'isolation et de la ventilation naturelle</li>
+      <li><strong>Bâtiment en Suède :</strong> climat froid, hivers rigoureux, été tempéré.</li>
+      <li><strong>Bâtiment dans le sud de la France :</strong>s climat méditerranéen, étés chauds, hivers doux.</li>
+    </ul>
+  <p>L’objectif est d’exploiter ces données pour :</p>
+    <ul>
+      <li>Identifier les cycles journaliers et saisonniers des températures.</li>
+      <li>Analyser la capacité d’inertie thermique des bâtiments en fonction des matériaux.</li>
+      <li>Évaluer les performances de l’isolation et leur impact sur la stabilité thermique intérieure.</li>
     </ul>
   </section>
 
   <section class="optimisation">
     <h2>Optimisation par Algorithmes</h2>
-    <p>Un algorithme d'intelligence artificielle analyse les données et propose des optimisations :</p>
+    <p>Un algorithme analyse les données et propose des optimisations :</p>
     <ul>
       <li>Régression pour prédire l’évolution thermique selon les cycles climatiques</li>
       <li>Réseaux de neurones pour modéliser les interactions complexes</li>
@@ -51,7 +50,7 @@
   </section>
 
   <section class="recommandations">
-    <h2>Recommandations et Applications</h2>
+    <h2>Applications</h2>
     <p>Les simulations permettent d’optimiser les paramètres de construction en prenant en compte les cycles thermiques :</p>
     <ul>
       <li>Choix de matériaux adaptés aux variations jour/nuit et aux saisons</li>
