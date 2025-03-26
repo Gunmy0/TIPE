@@ -2,82 +2,63 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>TIPE DELAROQUE</title>
+  <title>TIPE - Optimisation Thermique et Cycles Climatiques</title>
   <link rel="stylesheet" href="style3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="interaction.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>TIPE - Conception Générative et Cycles</h1>
-    <p>Exploration des cycles mathématiques et informatiques dans la création visuelle</p>
-    <button id="toggle-theme" class="theme-toggle">
-      <i class="fas fa-sun"></i> <!-- Icône soleil par défaut -->
-  </button>
-    <a href="journal.html" class="journal-link">Voir le journal de bord</a>
+    <h1>TIPE - Optimisation Thermique des Bâtiments et Cycles Climatiques</h1>
+    <p>Analyse des matériaux, de l'inertie thermique et de l'impact des cycles jour/nuit et saisonniers sur le confort thermique</p>
   </header>
-  
+
   <section class="introduction">
     <h2>Introduction</h2>
-    <p>Ce projet explore l'utilisation des cycles et des boucles de rétroaction en conception générative, notamment à travers le modèle de réaction-diffusion appliqué à l’architecture.</p>
+    <p>Ce projet explore l'optimisation thermique des bâtiments en fonction de l'inertie thermique des matériaux, de l'isolation et de l'impact de l'environnement (vent, ensoleillement, humidité), tout en intégrant l'influence des cycles jour/nuit et des variations saisonnières à travers la modélisation mathématique et des simulations numériques.</p>
   </section>
 
-  <section class="images-section">
-    <h2>Exemples Visuels</h2>
-    <div class="image-container">
-      <img src="images/image1.jpg" alt="Exemple visuel 1" width=100% height=100% class="project-image">
-      <img src="images/image2.webp" alt="Exemple visuel 2" width=70% height=70% class="project-image">
-    </div>
-  </section>
-
-  <section class="objectifs">
-    <h2>Objectifs</h2>
+  <section class="modelisation">
+    <h2>Modélisation Mathématique</h2>
+    <p>L'évolution de la température intérieure est modélisée par l’équation de la chaleur :</p>
+    <pre>\[ \frac{\partial T}{\partial t} = \alpha \nabla^2 T \]</pre>
+    <p>où \( \alpha \) est la diffusivité thermique des matériaux.</p>
+    <p>Les échanges thermiques sont décrits par :</p>
     <ul>
-        <li>Comprendre les principes de la conception générative et leur lien avec les mathématiques et la physique.</li>
-        <li>Étudier l'utilisation des boucles de rétroaction dans la génération de formes architecturales.</li>
-        <li>Développer un programme simulant un modèle de réaction-diffusion pour générer des motifs architecturaux.</li>
+      <li>Conduction thermique \( Q = \frac{kA(T_{int} - T_{ext})}{e} \)</li>
+      <li>Convection avec l'air \( Q = h A (T_{surf} - T_{air}) \)</li>
+      <li>Rayonnement thermique \( P = \sigma \varepsilon A (T^4 - T_{ext}^4) \)</li>
     </ul>
   </section>
-  
-  <section class="etude-cas">
-    <h2>Étude de Cas : Réaction-Diffusion et Architecture</h2>
-    <p>Le modèle de réaction-diffusion est utilisé pour générer des motifs naturels. En architecture, il permet d’optimiser la lumière, la ventilation et l’esthétique des structures.</p>
-    <p>Exemple : Simuler une façade perforée en fonction des paramètres de diffusion et réaction.</p>
-  </section>
-  <section class="algo-generatif">
-    <h2>Optimisation de structures en architecture et design</h2>
-    <p>Le cycle est central dans la conception générative :</p>
+
+  <section class="simulation">
+    <h2>Simulation et Analyse de Données</h2>
+    <p>Les données thermiques issues de bâtiments en Suède et dans le sud de la France sont analysées pour identifier :</p>
     <ul>
-      <li>Cycles d'itérations pour optimiser</li>
-      <li>Cycles d'évolution pour améliorer</li>
-      <li>Cycles de feedback pour apprendre</li>
-  </ul>
-    <p>Les algorithmes génétiques sont basés sur des cycles d'évolution (mutation, sélection, croisement), qui s'inspirent de l'évolution biologique.</p>
-    <p>Cela utilise des notions de graphes (optimisation de chemins), d'équations différentielles (pour la stabilité structurelle) et de mécanique des matériaux. </p>
-    <p>Exemple : Optimisation de structures légères et résistantes (comme celles utilisées en impression 3D).</p>
-  </section>
-  <section class="tensegrity">  <h2>modélisation d'une structure Tensegrity</h2>
-    <p>Une structure tensegrity simple est constituée de nœuds connectés par des barres rigides et des câbles en tension.</p>
-    
-    <p>🔹 Approche mathématique :</p>
-    
-    <p>Les forces internes sont modélisées sous forme de matrice.</p>
-    <p>La rigidité du système est exprimée par une matrice de raideur K.</p>
-    <p>Les déplacements des nœuds sont obtenus en résolvant une équation matricielle.</p>
-    <p>La matrice de rigidité K d'un système est définie par : K ⋅ U = F</p>
-    <p>où :</p>
-    <p>K est la matrice de raideur (qui représente la connexion entre les nœuds).</p>
-    <p>U est le vecteur des déplacements des nœuds.</p>
-    <p>F est le vecteur des forces appliquées.</p>
+      <li>Les cycles jour/nuit et saisonniers et leur impact sur la température intérieure</li>
+      <li>Les performances des matériaux en termes d'inertie thermique</li>
+      <li>L'impact de l'isolation et de la ventilation naturelle</li>
+    </ul>
   </section>
 
-  <section class="piste">
-    <h2>Pistes de recherche:</h2>
-    <p>GAN (Generative Adversarial Network) : Utilisé pour générer des formes complexes, des textures et des designs innovants.</p>
-    <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" target="_blank" class="journal-link">voir le wikipedia de GAN</a>
-    <p>VAE (Variational AutoEncoder) : Modèle probabiliste pour générer des variations continues d'un design.</p>
-    <a href="https://fr.wikipedia.org/wiki/Auto-encodeur_variationnel" target="_blank" class="journal-link">voir le wikipedia de VAE</a>
-    <a href="https://www.studysmarter.fr/resumes/ingenierie/genie-mecanique/dynamique-des-ponts/" target="_blank" class="journal-link">voir le site des dynamique-des-ponts</a>
+  <section class="optimisation">
+    <h2>Optimisation par Algorithmes</h2>
+    <p>Un algorithme d'intelligence artificielle analyse les données et propose des optimisations :</p>
+    <ul>
+      <li>Régression pour prédire l’évolution thermique selon les cycles climatiques</li>
+      <li>Réseaux de neurones pour modéliser les interactions complexes</li>
+      <li>Algorithmes génétiques pour optimiser les choix de matériaux et d’isolation</li>
+    </ul>
+  </section>
+
+  <section class="recommandations">
+    <h2>Recommandations et Applications</h2>
+    <p>Les simulations permettent d’optimiser les paramètres de construction en prenant en compte les cycles thermiques :</p>
+    <ul>
+      <li>Choix de matériaux adaptés aux variations jour/nuit et aux saisons</li>
+      <li>Optimisation de l'épaisseur des murs et de l'isolation selon le climat</li>
+      <li>Stratégies de ventilation naturelle et orientation du bâtiment en fonction des cycles solaires</li>
+    </ul>
+  </section>
 
 </body>
 </html>
