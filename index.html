@@ -83,17 +83,41 @@
       <li>conductivité thermique de l'isolant</li>
       <li>surface au sol(S) et hauteur du batiment(h)</li>
     </ul>
-    <p>Nous choisissons d'abord de considerer le batiment comme un parallelépipede: Surface d'échange = murs + toit :
-      A échangée = S + 4.h.rac(S)
-    </p>
-    <p>
-      Bilan thermique : 
-      flux thermique = (T intérieur - T extérieur) / R
-      où R = epaisseur isolant/ conductivité isolant * S
-    </p>
-    <p>
-      Conducto-convection: flux thermiqe (solde vers interieur) = hS (Ts-Tintérieur) où h = coefficient de convection
-    </p>
+
+    <h2>Calcul de la température intérieure <code>T<sub>int</sub></code></h2>
+
+    <h2>1. Équation de base</h2>
+    <p>Le système thermique est modélisé par cette équation différentielle :</p>
+    <pre><code>C<sub>tot</sub> · dT<sub>int</sub>/dt = (T<sub>ext</sub>(t) - T<sub>int</sub>(t)) / R<sub>tot</sub></code></pre>
+
+    <p>où :</p>
+    <ul>
+        <li><code>C<sub>tot</sub></code> est la capacité thermique totale du bâtiment (J/K)</li>
+        <li><code>R<sub>tot</sub></code> est la résistance thermique totale (conduction + convection)</li>
+        <li><code>T<sub>ext</sub>(t)</code> est la température extérieure à l’instant <code>t</code></li>
+    </ul>
+
+    <h2>2. Écart de température</h2>
+    <p>On commence par calculer l’écart thermique :</p>
+    <pre><code>ΔT = T<sub>ext</sub>(t) - T<sub>int</sub>(t)</code></pre>
+
+    <h2>3. Flux thermique</h2>
+    <p>Le flux thermique qui entre dans le bâtiment est :</p>
+    <pre><code>Φ(t) = ΔT / R<sub>tot</sub></code></pre>
+
+    <h2>4. Variation d'énergie</h2>
+    <p>Sur un petit pas de temps <code>dt</code>, la quantité de chaleur transférée est :</p>
+    <pre><code>ΔQ = Φ(t) · dt</code></pre>
+
+    <h2>5. Mise à jour de la température intérieure</h2>
+    <p>On en déduit la variation de température intérieure :</p>
+    <pre><code>ΔT<sub>int</sub> = ΔQ / C<sub>tot</sub> = (Φ · dt) / C<sub>tot</sub></code></pre>
+
+    <p>Soit finalement :</p>
+    <pre><code>T<sub>int</sub><sup>(i+1)</sup> = T<sub>int</sub><sup>(i)</sup> + (dt / C<sub>tot</sub>) · (T<sub>ext</sub>(t) - T<sub>int</sub><sup>(i)</sup>) / R<sub>tot</sub></code></pre>
+
+    <h2>6. Méthode utilisée</h2>
+    <p>Cette mise à jour est faite à chaque pas de temps via la <strong>méthode d’Euler explicite</strong>, une méthode d’intégration numérique simple.</p>
   </section>
 </body>
 </html>

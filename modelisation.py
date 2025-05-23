@@ -30,7 +30,7 @@ R_tot = 1 / (1/R_conduct + 1/R_conv)      # association en parallèle
 
 # === SIMULATION TEMPORELLE ===
 dt = 60                             # pas de temps (s)
-t_max = 1000 * 3600                   # 48 heures
+t_max = 48 * 3600                   # 48 heures
 n_steps = int(t_max / dt)
 
 T_int = np.zeros(n_steps)
@@ -41,6 +41,8 @@ temps = np.linspace(0, t_max / 3600, n_steps)  # en heures
 def T_ext(t):
     return T_ext_moy + T_ext_amp * np.sin(2 * np.pi * t / (24 * 3600))
 
+
+#EULER:
 for i in range(1, n_steps):
     flux = (T_ext(i * dt) - T_int[i-1]) / R_tot
     dT = (flux * dt) / C_tot
