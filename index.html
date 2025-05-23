@@ -86,7 +86,7 @@
 
     <h2>Calcul de la température intérieure <code>T<sub>int</sub></code></h2>
 
-    <h2>1. Équation de base</h2>
+    <h3>1. Équation de base</h3>
     <p>Le système thermique est modélisé par cette équation différentielle :</p>
     <pre><code>C<sub>tot</sub> · dT<sub>int</sub>/dt = (T<sub>ext</sub>(t) - T<sub>int</sub>(t)) / R<sub>tot</sub></code></pre>
 
@@ -97,26 +97,26 @@
         <li><code>T<sub>ext</sub>(t)</code> est la température extérieure à l’instant <code>t</code></li>
     </ul>
 
-    <h2>2. Écart de température</h2>
+    <h3>2. Écart de température</h3>
     <p>On commence par calculer l’écart thermique :</p>
     <pre><code>ΔT = T<sub>ext</sub>(t) - T<sub>int</sub>(t)</code></pre>
 
-    <h2>3. Flux thermique</h2>
+    <h3>3. Flux thermique</h3>
     <p>Le flux thermique qui entre dans le bâtiment est :</p>
     <pre><code>Φ(t) = ΔT / R<sub>tot</sub></code></pre>
 
-    <h2>4. Variation d'énergie</h2>
+    <h3>4. Variation d'énergie</h3>
     <p>Sur un petit pas de temps <code>dt</code>, la quantité de chaleur transférée est :</p>
     <pre><code>ΔQ = Φ(t) · dt</code></pre>
 
-    <h2>5. Mise à jour de la température intérieure</h2>
+    <h3>5. Mise à jour de la température intérieure</h3>
     <p>On en déduit la variation de température intérieure :</p>
     <pre><code>ΔT<sub>int</sub> = ΔQ / C<sub>tot</sub> = (Φ · dt) / C<sub>tot</sub></code></pre>
 
     <p>Soit finalement :</p>
     <pre><code>T<sub>int</sub><sup>(i+1)</sup> = T<sub>int</sub><sup>(i)</sup> + (dt / C<sub>tot</sub>) · (T<sub>ext</sub>(t) - T<sub>int</sub><sup>(i)</sup>) / R<sub>tot</sub></code></pre>
 
-    <h2>6. Méthode utilisée</h2>
+    <h3>6. Méthode utilisée</h3>
     <p>Cette mise à jour est faite à chaque pas de temps via la <strong>méthode d’Euler explicite</strong>, une méthode d’intégration numérique simple.</p>
   </section>
 </body>
