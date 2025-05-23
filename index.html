@@ -85,41 +85,61 @@
     </ul>
 
     <h3>1. Équation du bilan thermique</h3>
-    <p>Le modèle thermique du bâtiment repose sur un bilan d’énergie :</p>
-    <pre><code>C<sub>tot</sub> · dT<sub>int</sub>/dt = (T<sub>ext</sub>(t) - T<sub>int</sub>(t)) / R<sub>tot</sub></code></pre>
+    <p>Le bâtiment est modélisé comme un système à température intérieure uniforme. Le bilan d’énergie est :</p>
+    <pre><code>C<sub>tot</sub> · dT<sub>int</sub>/dt = Φ(t)</code></pre>
+    <p>où :</p>
+    <ul>
+      <li><code>Φ(t)</code> est le flux thermique net (W)</li>
+      <li><code>C<sub>tot</sub></code> est la capacité thermique totale du bâtiment (J/K)</li>
+    </ul>
 
     <h3>2. Calcul de la capacité thermique totale <code>C<sub>tot</sub></code></h3>
-    <p>On modélise le bâtiment comme un volume homogène :</p>
     <pre><code>C<sub>tot</sub> = ρ · c · V = ρ · c · (S · h)</code></pre>
     <ul>
       <li><code>ρ</code> : densité des matériaux (kg/m³)</li>
       <li><code>c</code> : capacité thermique massique (J/kg·K)</li>
-      <li><code>S</code> : surface au sol (m²)</li>
-      <li><code>h</code> : hauteur du bâtiment (m)</li>
+      <li><code>V = S · h</code> : volume du bâtiment (m³)</li>
     </ul>
 
-    <h3>3. Calcul de la résistance thermique totale <code>R<sub>tot</sub></code></h3>
-    <p>Deux mécanismes sont pris en compte :</p>
-    <ul>
-      <li><strong>Conduction :</strong> à travers les parois isolées</li>
-      <li><strong>Convection :</strong> entre les surfaces intérieures et l’air intérieur</li>
-    </ul>
-
-    <p>Surface d’échange (parois + toit) :</p>
+    <h3>3. Surface d’échange thermique</h3>
+    <p>On suppose un bâtiment parallélépipédique avec :</p>
     <pre><code>A = S + 4 · h · √S</code></pre>
+    <p>Cette surface correspond au toit (<code>S</code>) et aux quatre murs latéraux.</p>
 
-    <p>Les résistances associées :</p>
+    <h3>4. Calcul du flux thermique <code>Φ(t)</code></h3>
+    <p>Le flux thermique total est la somme de deux contributions :</p>
+
+    <h3>4.1. Flux par conduction à travers l’isolant :</h3>
+    <pre><code>Φ<sub>cond</sub>(t) = (T<sub>ext</sub>(t) - T<sub>int</sub>(t)) / R<sub>cond</sub></code></pre>
     <pre><code>R<sub>cond</sub> = e / (λ · A)</code></pre>
+    <ul>
+      <li><code>e</code> : épaisseur de l’isolant (m)</li>
+      <li><code>λ</code> : conductivité thermique de l’isolant (W/m·K)</li>
+    </ul>
+
+    <h3>4.2. Flux par convection intérieure :</h3>
+    <pre><code>Φ<sub>conv</sub>(t) = h<sub>conv</sub> · A · (T<sub>surf</sub> - T<sub>int</sub>)</code></pre>
+    <p>Si <code>T<sub>surf</sub> = T<sub>ext</sub>(t)</code> (approximation), on obtient :</p>
+    <pre><code>Φ<sub>conv</sub>(t) = (T<sub>ext</sub>(t) - T<sub>int</sub>(t)) / R<sub>conv</sub></code></pre>
     <pre><code>R<sub>conv</sub> = 1 / (h<sub>conv</sub> · A)</code></pre>
 
-    <p>Résistance thermique équivalente (association en parallèle) :</p>
+    <h3>4.3. Flux thermique total :</h3>
+    <p>Les deux résistances sont en parallèle :</p>
     <pre><code>1 / R<sub>tot</sub> = 1 / R<sub>cond</sub> + 1 / R<sub>conv</sub></code></pre>
+    <pre><code>Φ(t) = (T<sub>ext</sub>(t) - T<sub>int</sub>(t)) / R<sub>tot</sub></code></pre>
 
-    <h3>4. Mise à jour de <code>T<sub>int</sub></code> (méthode d’Euler)</h3>
-    <p>À chaque pas de temps <code>dt</code>, on met à jour la température intérieure :</p>
+    <h3>5. Mise à jour numérique de <code>T<sub>int</sub></code> (méthode d’Euler)</h3>
+    <p>À chaque pas de temps <code>dt</code>, on actualise la température intérieure :</p>
+    <pre><code>T<sub>int</sub><sup>i+1</sup> = T<sub>int</sub><sup>i</sup> + (dt / C<sub>tot</sub>) · Φ(t)</code></pre>
+    <p>Ou, en remplaçant <code>Φ(t)</code> :</p>
     <pre><code>T<sub>int</sub><sup>i+1</sup> = T<sub>int</sub><sup>i</sup> + (dt / C<sub>tot</sub>) · (T<sub>ext</sub>(t) - T<sub>int</sub><sup>i</sup>) / R<sub>tot</sub></code></pre>
 
-    <p>Cette méthode permet de simuler numériquement l'évolution de <code>T<sub>int</sub></code> au cours du temps.</p>
+    <h3>6. Interprétation</h3>
+    <ul>
+      <li>Un grand <code>C<sub>tot</sub></code> → forte inertie : la température varie lentement.</li>
+      <li>Un grand <code>R<sub>tot</sub></code> → bonne isolation : les échanges sont plus lents.</li>
+      <li>Le produit <code>τ = C<sub>tot</sub> · R<sub>tot</sub></code> est le <strong>temps caractéristique thermique</strong>.</li>
+    </ul>
   </section>
 </body>
 </html>
