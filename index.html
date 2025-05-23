@@ -84,40 +84,42 @@
       <li>surface au sol(S) et hauteur du batiment(h)</li>
     </ul>
 
-    <h2>Calcul de la température intérieure <code>T<sub>int</sub></code></h2>
-
-    <h3>1. Équation de base</h3>
-    <p>Le système thermique est modélisé par cette équation différentielle :</p>
+    <h3>1. Équation du bilan thermique</h3>
+    <p>Le modèle thermique du bâtiment repose sur un bilan d’énergie :</p>
     <pre><code>C<sub>tot</sub> · dT<sub>int</sub>/dt = (T<sub>ext</sub>(t) - T<sub>int</sub>(t)) / R<sub>tot</sub></code></pre>
 
-    <p>où :</p>
+    <h3>2. Calcul de la capacité thermique totale <code>C<sub>tot</sub></code></h3>
+    <p>On modélise le bâtiment comme un volume homogène :</p>
+    <pre><code>C<sub>tot</sub> = ρ · c · V = ρ · c · (S · h)</code></pre>
     <ul>
-        <li><code>C<sub>tot</sub></code> est la capacité thermique totale du bâtiment (J/K)</li>
-        <li><code>R<sub>tot</sub></code> est la résistance thermique totale (conduction + convection)</li>
-        <li><code>T<sub>ext</sub>(t)</code> est la température extérieure à l’instant <code>t</code></li>
+      <li><code>ρ</code> : densité des matériaux (kg/m³)</li>
+      <li><code>c</code> : capacité thermique massique (J/kg·K)</li>
+      <li><code>S</code> : surface au sol (m²)</li>
+      <li><code>h</code> : hauteur du bâtiment (m)</li>
     </ul>
 
-    <h3>2. Écart de température</h3>
-    <p>On commence par calculer l’écart thermique :</p>
-    <pre><code>ΔT = T<sub>ext</sub>(t) - T<sub>int</sub>(t)</code></pre>
+    <h3>3. Calcul de la résistance thermique totale <code>R<sub>tot</sub></code></h3>
+    <p>Deux mécanismes sont pris en compte :</p>
+    <ul>
+      <li><strong>Conduction :</strong> à travers les parois isolées</li>
+      <li><strong>Convection :</strong> entre les surfaces intérieures et l’air intérieur</li>
+    </ul>
 
-    <h3>3. Flux thermique</h3>
-    <p>Le flux thermique qui entre dans le bâtiment est :</p>
-    <pre><code>Φ(t) = ΔT / R<sub>tot</sub></code></pre>
+    <p>Surface d’échange (parois + toit) :</p>
+    <pre><code>A = S + 4 · h · √S</code></pre>
 
-    <h3>4. Variation d'énergie</h3>
-    <p>Sur un petit pas de temps <code>dt</code>, la quantité de chaleur transférée est :</p>
-    <pre><code>ΔQ = Φ(t) · dt</code></pre>
+    <p>Les résistances associées :</p>
+    <pre><code>R<sub>cond</sub> = e / (λ · A)</code></pre>
+    <pre><code>R<sub>conv</sub> = 1 / (h<sub>conv</sub> · A)</code></pre>
 
-    <h3>5. Mise à jour de la température intérieure</h3>
-    <p>On en déduit la variation de température intérieure :</p>
-    <pre><code>ΔT<sub>int</sub> = ΔQ / C<sub>tot</sub> = (Φ · dt) / C<sub>tot</sub></code></pre>
+    <p>Résistance thermique équivalente (association en parallèle) :</p>
+    <pre><code>1 / R<sub>tot</sub> = 1 / R<sub>cond</sub> + 1 / R<sub>conv</sub></code></pre>
 
-    <p>Soit finalement :</p>
-    <pre><code>T<sub>int</sub><sup>(i+1)</sup> = T<sub>int</sub><sup>(i)</sup> + (dt / C<sub>tot</sub>) · (T<sub>ext</sub>(t) - T<sub>int</sub><sup>(i)</sup>) / R<sub>tot</sub></code></pre>
+    <h3>4. Mise à jour de <code>T<sub>int</sub></code> (méthode d’Euler)</h3>
+    <p>À chaque pas de temps <code>dt</code>, on met à jour la température intérieure :</p>
+    <pre><code>T<sub>int</sub><sup>i+1</sup> = T<sub>int</sub><sup>i</sup> + (dt / C<sub>tot</sub>) · (T<sub>ext</sub>(t) - T<sub>int</sub><sup>i</sup>) / R<sub>tot</sub></code></pre>
 
-    <h3>6. Méthode utilisée</h3>
-    <p>Cette mise à jour est faite à chaque pas de temps via la <strong>méthode d’Euler explicite</strong>, une méthode d’intégration numérique simple.</p>
+    <p>Cette méthode permet de simuler numériquement l'évolution de <code>T<sub>int</sub></code> au cours du temps.</p>
   </section>
 </body>
 </html>
