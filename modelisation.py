@@ -38,7 +38,6 @@ T_int[0] = 20
 for n in range(N - 1):
     Te = T_ext(t[n])
     dT_mur = (Te - T_mur[n]) / R_iso - (T_mur[n] - T_int[n]) / R_mur_int
-    print (dT_mur)
     dT_int = (T_mur[n] - T_int[n]) / R_mur_int
     T_mur[n+1] = T_mur[n] + dt * dT_mur / 1000
     T_int[n+1] = T_int[n] + dt * dT_int / 1000
