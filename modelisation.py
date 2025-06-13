@@ -34,7 +34,7 @@ t_max = 72
 N = int(t_max / dt)
 t = np.linspace(0, t_max, N)
 
-T_ext = lambda t: 26 + 10 * np.sin(2 * np.pi * t / 24)
+T_ext = lambda t: 26 + 7 * np.sin(2 * np.pi * t / 24)
 
 T_mur = np.zeros(N)
 T_int = np.zeros(N)
