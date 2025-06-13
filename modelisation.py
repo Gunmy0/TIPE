@@ -10,6 +10,7 @@ rho_mur = 2500 #pierre calcaire
 c_p_mur = 880 #pierre calcaire
 rho_air = 1.2
 c_p_air = 1000
+h_int = 9
 
 volume_air = A_sol * h
 
@@ -23,7 +24,9 @@ C_int = volume_air * rho_air * c_p_air
 V_mur = A_mur * e_mur
 C_mur = V_mur * rho_mur * c_p_mur
 R_iso = e_mur / (lambda_iso * A_mur)
-R_mur_int = 0.15
+R_mur_int = 1/(A_mur*h_int)
+print(A_mur)
+print(R_mur_int)
 
 # === Simulation avec Euler explicite ===
 dt = 0.1  # h
