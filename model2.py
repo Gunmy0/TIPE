@@ -26,17 +26,17 @@ R_couche = e_couche / (lambda_mur * A_mur)
 
 # === Résistances et capacités ===
 C1 = C2 = C3 = C_mur
-C_int = volume_air * rho_air * c_p_air
+C_int = volume_air * rho_air * c_p_air + rho_mur * c_p_mur * A_sol * 0.2 +  rho_mur * c_p_mur * A_sol * 0.10
 R_iso = R_couche       # résistance vers extérieur
 R12 = R23 = R_couche   # résistances internes murales
 R_mur_int = 1 / (h_int * A_mur)
 
 # === Simulation (Euler explicite) ===
 dt = 0.1  # h
-t_max = 72
+t_max = 300
 N = int(t_max / dt)
 t = np.linspace(0, t_max, N)
-T_ext = lambda t: 26 + 10 * np.sin(2 * np.pi * t / 24)
+T_ext = lambda t: 25 + 7 * np.sin(2 * np.pi * t / 24)
 
 # === Initialisation ===
 T1 = np.zeros(N)

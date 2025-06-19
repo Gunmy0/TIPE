@@ -20,7 +20,7 @@ A_mur = 2 * (np.sqrt(A_sol) + np.sqrt(A_sol)) * h
 
 
 #Calcule des capcités thermiques ainsi que des resistances thermiques
-C_int = volume_air * rho_air * c_p_air
+C_int = volume_air * rho_air * c_p_air + rho_mur * c_p_mur * A_sol * 0.2 +  rho_mur * c_p_mur * A_sol * 0.10
 V_mur = A_mur * e_mur
 C_mur = V_mur * rho_mur * c_p_mur
 R_iso = e_mur / (lambda_iso * A_mur)
