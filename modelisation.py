@@ -30,7 +30,7 @@ print(R_mur_int)
 
 # === Simulation avec Euler explicite ===
 dt = 0.1  # h
-t_max = 72
+t_max = 300
 N = int(t_max / dt)
 t = np.linspace(0, t_max, N)
 
