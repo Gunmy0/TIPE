@@ -1,0 +1,76 @@
+| **Matériau**                                                                 | **Conductivité thermique (W·m⁻¹·K⁻¹)** |
+| ---------------------------------------------------------------------------- | -------------------------------------- |
+| Air (78% N₂, 21% O₂, 0,93% Ar, 0,04% CO₂)                                    | 0,025                                  |
+| Polyuréthane rigide (Mousse)                                                 | 0,029                                  |
+| Laine de verre ou laine de roche                                             | 0,035                                  |
+| Laines ou plumes animales                                                    | 0,035                                  |
+| Verre recyclé (Mousse)                                                       | 0,035                                  |
+| Polystyrène expansé classe 5 (NF T 56-203)                                   | 0,037                                  |
+| Cellulose soufflée                                                           | 0,037 – 0,042                          |
+| Perlite expansée                                                             | 0,039                                  |
+| Polystyrène expansé classe 3 (NF T 56-202)                                   | 0,039                                  |
+| Bois (Fibre de)                                                              | 0,04                                   |
+| Chanvre (Fibre de)                                                           | 0,042                                  |
+| Liège expansé pur                                                            | 0,043                                  |
+| Polystyrène expansé classe 1 (NF T 56-201)                                   | 0,044                                  |
+| Paille                                                                       | 0,045                                  |
+| Liège expansé aggloméré au brai                                              | 0,048                                  |
+| Vermiculite                                                                  | 0,048                                  |
+| Balsa                                                                        | 0,05                                   |
+| Verre cellulaire (d = 0,12 – 0,14)                                           | 0,05                                   |
+| Verre cellulaire (d = 0,13 – 0,14)                                           | 0,055                                  |
+| Bois - Sciure sèche                                                          | 0,06 – 0,07                            |
+| Verre cellulaire                                                             | 0,063                                  |
+| Bois de cèdre                                                                | 0,077                                  |
+| Perlite - Brique alvéolaire (Poroton)                                        | 0,08                                   |
+| Chanvre (Brique de)                                                          | 0,085                                  |
+| Bois - Panneaux de particules pressés                                        | 0,1                                    |
+| Liège comprimé                                                               | 0,1                                    |
+| Bois feuillus très légers (peuplier, okoumé)                                 | 0,12                                   |
+| Bois - Contreplaqué/latté (okoumé, peuplier)                                 | 0,12                                   |
+| Paille comprimée                                                             | 0,12                                   |
+| Bois de noyer (0,65 g/cm³)                                                   | 0,14                                   |
+| Bois feuillus légers (tilleul, bouleau, érable) et résineux mi-lourds (pins) | 0,15                                   |
+| Bois - Contreplaqué/latté (pins maritimes ou d’Orégon)                       | 0,15                                   |
+| Bois de pin (perpendiculairement aux fibres)                                 | 0,15                                   |
+| Béton traité à l'autoclave                                                   | 0,16                                   |
+| Bois de chêne                                                                | 0,16                                   |
+| Bois - Panneaux de particules                                                | 0,17                                   |
+| Béton cellulaire                                                             | 0,22                                   |
+| Bitume                                                                       | 0,23                                   |
+| Bois feuillus mi-lourds (hêtre, frêne) et résineux lourds                    | 0,23                                   |
+| Béton de perlite ou vermiculite                                              | 0,24                                   |
+| Béton cellulaire (autre valeur)                                              | 0,33                                   |
+| Plâtre standard                                                              | 0,35                                   |
+| Bois de pin (parallèlement aux fibres)                                       | 0,36                                   |
+| Caoutchouc vulcanisé                                                         | 0,36 – 0,40                            |
+| Béton de pouzzolane                                                          | 0,44                                   |
+| Amiante-ciment cellulose                                                     | 0,46                                   |
+| Béton de ponce naturelle                                                     | 0,46                                   |
+| Plâtre haute dureté                                                          | 0,5                                    |
+| Eau                                                                          | 0,6                                    |
+| Asphalte pur                                                                 | 0,7                                    |
+| Béton caverneux (<10 % sable de rivière)                                     | 0,7                                    |
+| Brique (terre cuite)                                                         | 0,84                                   |
+| Amiante-ciment                                                               | 0,95                                   |
+| Terre cuite                                                                  | 1 – 1,35                               |
+| Pierre tendre                                                                | 1,05                                   |
+| Asphalte sablé                                                               | 1,15                                   |
+| Béton caverneux (granulats siliceux et calcaires)                            | 1,4                                    |
+| Béton plein (laitiers de Lorraine)                                           | 1,4                                    |
+| Béton armé et mortier                                                        | 1,5                                    |
+| Verre                                                                        | 1,5                                    |
+| Pierre ferme calcaire                                                        | 1,7                                    |
+| Béton plein (granulats siliceux, calcaires)                                  | 1,75                                   |
+| Ardoise                                                                      | 2,1                                    |
+| Pierre dure calcaire                                                         | 2,2                                    |
+| Lave                                                                         | 2,9                                    |
+| Marbre                                                                       | 2,9                                    |
+| Basalte                                                                      | 3,5                                    |
+| Gneiss                                                                       | 3,5                                    |
+| Granite                                                                      | 3,5                                    |
+| Acier inoxydable                                                             | 16,3                                   |
+| Acier au carbone (0,5 – 1,5% C)                                              | 50,2                                   |
+| Fer                                                                          | 80                                     |
+| Aluminium                                                                    | 210                                    |
+| Cuivre                                                                       | 370                                    |

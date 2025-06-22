@@ -1,0 +1,158 @@
+| Matériau | Capacité thermique (J.kg⁻¹.K⁻¹) |
+|----------|----------------------------------|
+| Acétyle (Delrin) | 1464 |
+| Actinium | 126 |
+| Aluminium | 921 |
+| Américium | 126 |
+| Ammoniac (NH3) | 4686 |
+| Antimoine | 207 |
+| Arsenic (gris) | 331 |
+| Baryum | 188 |
+| Béryllium | 1841 |
+| Bismuth | 121 |
+| Bore | 1130 |
+| Carbure de bore (B4C) | 921 |
+| Laiton (Cu70, Zn30) | 418 |
+| Brique cuite | 707 |
+| Bronze (Cu75, Sn25) | 377 |
+| Caoutchouc butyle | 1966 |
+| Cadmium | 230 |
+| Cristal de calcite | 837 |
+| Calcium | 657 |
+| Cérium | 193 |
+| Césium | 230 |
+| Craie | 921 |
+| Chrome | 448 |
+| Cobalt | 423 |
+| Béton | 657 |
+| Cuivre | 385 |
+| Liège | 2008 |
+| Cupronickel (Cu70, Ni30) | 377 |
+| Cupronickel (Cu90, Ni10) | 377 |
+| Curium | 126 |
+| Diamant | 506 |
+| Dolomite (CaMg(CO3)2) | 921 |
+| Époxy | 1172 |
+| Erbium | 168 |
+| Éthyl-vinyle-acétate | 2301 |
+| Brique d'argile réfractaire | 732 |
+| Verre flint | 502 |
+| Fluorocarbones (CFE / CTFE) | 921 |
+| Fluorocarbones (FEP) | 1172 |
+| Verre soufflé (d=0.144) | 753 |
+| Francium | 142 |
+| Verre de quartz (SiO2) | 745 |
+| Gadolinium | 230 |
+| Gallium | 372 |
+| Germanium | 322 |
+| Verre | 837 |
+| Or | 128 |
+| Granite | 837 |
+| Graphite | 707 |
+| Gypse artificiel | 1088 |
+| Gypse minéral | 1088 |
+| Hématite (Fe2O3) | 628 |
+| Holmium | 165 |
+| Indium | 239 |
+| Iode (solide) | 218 |
+| Iridium | 130 |
+| Fer | 448 |
+| Plomb | 130 |
+| Calcaire | 921 |
+| Lithium | 3515 |
+| Lutécium | 151 |
+| Magnésium | 1004 |
+| Magnétite | 653 |
+| Manganèse | 481 |
+| Manganin (Cu84, Ni4, Mn12) | 377 |
+| Marbre | 879 |
+| Mercure (liquide) | 138 |
+| Mica | 837 |
+| Néodyme | 197 |
+| Caoutchouc néoprène | 2176 |
+| Nickel | 444 |
+| Caoutchouc nitrile | 1966 |
+| Nylon | 1527 |
+| Palladium | 243 |
+| PETN | 1674 |
+| Phénoxy | 1674 |
+| Phosphore (blanc) | 741 |
+| Plâtre | 1088 |
+| Plastique stratifié | 1255 |
+| Verre plat | 753 |
+| Platine | 134 |
+| Plutonium | 134 |
+| Polonium | 121 |
+| Polycarbonate | 1674 |
+| Polyester renforcé en fibres de verre | 1130 |
+| Polyéthylène de densité moyenne | 2301 |
+| Copolymère de polypropylène | 2343 |
+| Mousse polystyrène (d=0.038) | 1130 |
+| Polystyrène | 1423 |
+| Mousse polyuréthane flexible | 1757 |
+| PVC souple | 1674 |
+| PVC rigide | 1004 |
+| Porcelaine | 753 |
+| Potassium | 753 |
+| Verre pyrex | 728 |
+| Verre céramique Pyroceram 9606 | 782 |
+| Verre céramique Pyroceram 9608 | 808 |
+| Cristal de quartz, axial (SiO2) | 753 |
+| Cristal de quartz, radial (SiO2) | 753 |
+| Radium | 113 |
+| Rotin | 540 |
+| Rhénium | 138 |
+| Rhodium | 243 |
+| Roche ou pierre | 837 |
+| Caoutchouc naturel | 2092 |
+| Mousse caoutchouc naturel | 2092 |
+| Rubidium | 377 |
+| Ruthénium | 234 |
+| Sable (sec) | 753 |
+| Grès | 962 |
+| Saphir | 778 |
+| Scandium | 552 |
+| Sélénium (gris) | 322 |
+| Schiste | 837 |
+| Silicium | 703 |
+| Carbure de silicium (SiC) | 678 |
+| Argent | 236 |
+| Ardoise | 837 |
+| Neige fraîche | 2092 |
+| Neige tassée | 2092 |
+| Verre sodocalcique | 753 |
+| Sodium | 1213 |
+| Spinelle (MgO.Al2O3) | 812 |
+| Stéatite (MgO.SiO2) | 837 |
+| Acier inoxydable 304 | 502 |
+| Strontium | 301 |
+| Soufre | 711 |
+| Talc | 816 |
+| Tantale | 138 |
+| Teflon (PTFE) | 1004 |
+| Tellure | 201 |
+| Thallium | 130 |
+| Thorium | 117 |
+| Thulium | 160 |
+| Étain | 226 |
+| Titane | 523 |
+| Topaze (2AlFO.SiO2) (axiale) | 1255 |
+| Tungstène | 134 |
+| Uranium | 117 |
+| Vanadium | 460 |
+| Brique vermiculite | 837 |
+| Poudre isolante vermiculite | 837 |
+| Verre Vycor | 745 |
+| Eau liquide | 4184 |
+| Eau solide (glace) | 4217 |
+| Bois (balsa) | 2301 |
+| Bois (cyprès) | 2301 |
+| Bois (chêne, rouge, noir) | 2385 |
+| Bois (chêne, blanc) | 2385 |
+| Bois (pin) | 2301 |
+| Bois (teck) | 2301 |
+| Ytterbium | 149 |
+| Yttrium | 293 |
+| Zinc | 389 |
+| Zircon (ZrO2.SiO2) | 544 |
+| Zirconium | 285 |
