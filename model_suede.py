@@ -46,7 +46,7 @@ T3 = np.zeros(N)
 T_int = np.zeros(N)
 T1[0] = 3
 T2[0] = 8
-T3[0] = 13
+T3[0] = 1
 T_int[0] = 15  # bâtiment chauffé
 
 for n in range(N - 1):
