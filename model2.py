@@ -24,7 +24,7 @@ def lire_parametres(fichier):
     return params
 
 # Lecture des paramètres
-param = lire_parametres("parametres_s.txt")
+param = lire_parametres("parametres_f.txt")
 
 # Assignation
 A_sol = param["A_sol"]
