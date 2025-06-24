@@ -57,7 +57,8 @@ R_couche = e_couche / (lambda_mur * A_mur)
 
 C1 = C2 = C3 = C_mur
 C_int = volume_air * rho_air * c_p_air + rho_mur * c_p_mur * A_sol * 0.2 + rho_mur * c_p_mur * A_sol * 0.10
-R_iso = R12 = R23 = R_couche
+R_iso = 1 / (h_int * A_mur)
+R12 = R23 = R_couche
 R_mur_int = 1 / (h_int * A_mur)
 
 T_ext = lambda t: T_ext_base + T_ext_ampl * np.sin(2 * np.pi * t / 24)

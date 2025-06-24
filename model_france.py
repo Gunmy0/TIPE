@@ -29,7 +29,7 @@ print(A_mur)
 # === Résistances et capacités ===
 C1 = C2 = C3 = C_mur
 C_int = volume_air * rho_air * c_p_air + rho_mur * c_p_mur * A_sol * 0.2 +  rho_mur * c_p_mur * A_sol * 0.10
-R_iso = R_couche       # résistance vers extérieur
+R_iso = R_mur_int = 1 / (h_int * A_mur)       # résistance vers extérieur
 R12 = R23 = R_couche   # résistances internes murales
 #Conducto-convection
 R_mur_int = 1 / (h_int * A_mur)
