@@ -1,0 +1,21 @@
+# Paramètres géométriques et physiques
+A_sol = 300
+h = 2.5
+e_mur = 0.6
+lambda_mur = 2.2
+rho_mur = 2500
+c_p_mur = 880
+rho_air = 1.2
+c_p_air = 1000
+h_int = 9
+
+# Températures initiales [T1, T2, T3, T_int]
+T_init = 25, 22.5, 20, 20
+
+# Température extérieure : base + amplitude
+T_ext_base = 25
+T_ext_ampl = 7
+
+# Simulation
+dt = 0.1
+t_max = 300

@@ -23,10 +23,11 @@ A_mur = 2 * (np.sqrt(A_sol) + np.sqrt(A_sol)) * h
 C_int = volume_air * rho_air * c_p_air + rho_mur * c_p_mur * A_sol * 0.2 +  rho_mur * c_p_mur * A_sol * 0.10
 V_mur = A_mur * e_mur
 C_mur = V_mur * rho_mur * c_p_mur
+#Conduction
 R_iso = e_mur / (lambda_iso * A_mur)
+#Conduco-convection
 R_mur_int = 1/(A_mur*h_int)
-print(A_mur)
-print(R_mur_int)
+
 
 # === Simulation avec Euler explicite ===
 dt = 0.1  # h
@@ -43,11 +44,10 @@ T_int[0] = 20
 
 for n in range(N - 1):
     Te = T_ext(t[n])
-    dT_mur = (Te - T_mur[n]) / R_iso - (T_mur[n] - T_int[n]) / R_mur_int
-    dT_int = (T_mur[n] - T_int[n]) / R_mur_int
-    T_mur[n+1] = T_mur[n] + dt*3600 * dT_mur / C_mur
-    T_int[n+1] = T_int[n] + dt *3600 *dT_int / C_int
-
+    dT_mur = ((Te - T_mur[n]) / R_iso - (T_mur[n] - T_int[n]) / R_mur_int)/ C_mur
+    dT_int = ((T_mur[n] - T_int[n]) / R_mur_int) / C_int
+    T_mur[n+1] = T_mur[n] + dt*3600 * dT_mur 
+    T_int[n+1] = T_int[n] + dt *3600 *dT_int
 # === Affichage ===
 plt.figure(figsize=(10,6))
 plt.plot(t, T_mur, label="T_mur (Euler)")
