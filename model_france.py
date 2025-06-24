@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # === Données géométriques et physiques ===
-A_sol = 300         # m²
+A_sol = 300        # m²
 h = 2.5             # m
 e_mur = 0.6         # m (épaisseur totale)
 lambda_mur = 2.2    # W/m·K (pierre calcaire)
@@ -23,6 +23,7 @@ e_couche = e_mur / n_couches
 V_couche = A_mur * e_couche
 C_mur = rho_mur * c_p_mur * V_couche
 R_couche = e_couche / (lambda_mur * A_mur)
+print(A_mur)
 
 # === Résistances et capacités ===
 C1 = C2 = C3 = C_mur
